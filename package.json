@@ -31,6 +31,21 @@
       "react-app/jest"
     ]
   },
+  "rules": {
+    "no-unused-vars": "warn",
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        " components": [
+          "/App",
+          "Pages/HomePage"
+        ],
+        "specialLink": [
+          "#!"
+        ]
+      }
+    ]
+  },
   "browserslist": {
     "production": [
       ">0.2%",
