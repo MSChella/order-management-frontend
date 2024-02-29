@@ -23,19 +23,28 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-  
-    "clean": "rmdir public/images/"
+    "lint": "eslint --ignore-pattern package.json .",
+      "clean": "rmdir public/images/"
 
   },
   "proxy": "http://localhost:5000",
   "eslintConfig": {
+    "overrides": [
+      {
+        "files": ["*.json"],
+        "rules": {
+          "no-unused-vars": "off"
+        }
+      }
+    ],
     "extends": [
       "react-app",
       "react-app/jest"
     ]
   },
+
   "rules": {
-    "no-unused-vars": "off",
+    "no-unused-vars": "warn",
     "jsx-a11y/anchor-is-valid": [
       "error",
       {
