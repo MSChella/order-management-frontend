@@ -1,0 +1,77 @@
+/* Header.css */
+
+/* Header Container */
+.navbar {
+    background-color: #3498db; /* Set your desired background color */
+    padding: 15px 0; /* Adjust the padding as needed */
+  }
+
+  
+  
+  /* Brand Link */
+  .navbar-brand {
+    color: #fff; /* Set text color */
+    font-size: 1.5rem; /* Set font size */
+  }
+  
+  /* Navbar Toggler Icon Color */
+  .navbar-toggler-icon {
+    background-color: #fff; /* Set color for the toggler icon */
+  }
+  
+  /* Navbar Links Container */
+  .navbar-nav {
+    margin-left: 10px; /* Move navbar links to the right */
+  }
+  
+  /* Navbar Links */
+  .navbar-nav .nav-item {
+    margin-right: 55px; /* Adjust space between navbar links */
+  }
+  
+  .nav-link {
+    color: #3e2f2f; /* Set text color */
+    font-weight: bold; /* Set font weight */
+    transition: color 0.3s; /* Smooth color transition on hover */
+  }
+  
+  .nav-link:hover {
+    color: #f39c12; /* Set hover color */
+  }
+  .navbar-light .navbar-toggler-icon {
+    background-color: #fff;
+  }
+  /* Dropdown Styles */
+  .nav-item.dropdown:hover .dropdown-menu {
+    display: block; /* Show dropdown on hover */
+  }
+  
+  .dropdown-menu {
+    background-color: #2980b9; /* Set dropdown background color */
+    border: none; /* Remove dropdown border */
+  }
+  
+  .dropdown-item {
+    color: #fff; /* Set dropdown item text color */
+  }
+  
+  .dropdown-item:hover {
+    background-color: #1a5276; /* Set hover background color */
+  }
+  
+  /* Sticky Header */
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  /* Add margin to content to avoid overlapping with the sticky header */
+  body {
+    margin-top: 80px; /* Adjust as needed based on your header height */
+  }
+  .custom-header-bg {
+    background-color:rgb(199, 193, 193); /* Replace with your desired color */
+  }
+  
