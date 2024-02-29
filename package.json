@@ -35,13 +35,21 @@
     ]
   },
   "rules": {
-    "no-unused-vars": "warn",
+    "no-unused-vars": "off",
     "jsx-a11y/anchor-is-valid": [
       "error",
       {
         " components": [
           "/App",
-          "Pages/HomePage"
+          "Pages/Home",
+          "component/Header/Header",
+          "OrderContext",
+          "components/Header/Header",
+          "index",
+          "Home",
+         " pages/MyOrdersPages"
+
+         
         ],
         "specialLink": [
           "#!"
