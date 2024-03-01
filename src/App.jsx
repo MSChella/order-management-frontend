@@ -76,9 +76,8 @@ const App = () => {
     const token = localStorage.getItem('token');
 
     if (token) {
-      axios.post('/api/auth/verify', { token }) // Assuming you have an endpoint to verify the token
-        .then(() => setAuthenticated(true))
-        .catch(() => setAuthenticated(false));
+      setAuthenticated(true);
+
     }
   }, []);
 

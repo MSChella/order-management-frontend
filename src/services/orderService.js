@@ -5,7 +5,7 @@ const orders = [];
 
 export const fetchOrders = async () => {
     try {
-        const response = await axios.get('/api/orders');
+        const response = await axios.get('/orders');
         return response.data;
 
     } catch (error) {
@@ -15,7 +15,7 @@ export const fetchOrders = async () => {
 };
 export const fetchMyOrders = async () => {
     try {
-        const response = await axios.get('/api/place-orders');
+        const response = await axios.get('/place-orders');
         return response.data;
 
     } catch (error) {
@@ -25,7 +25,7 @@ export const fetchMyOrders = async () => {
 };
 export const submitOrders = async (orders) => {
     try {
-        const response = await axios.post('/api/place-orders/submit-orders', orders);
+        const response = await axios.post('/place-orders/submit-orders', orders);
         return response.data;
     } catch (error) {
         console.error('Error submitting orders', error);

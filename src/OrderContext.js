@@ -31,7 +31,7 @@ export const OrderProvider = ({ children }) => {
         // Implement logic to submit the selected orders
         console.log('Submitting orders:', orders);
         try {
-            const response = await axios.post('/api/place-orders/submit-orders', orders);
+            const response = await axios.post('/place-orders/submit-orders', orders);
             console.log('Response from server:', response.data);
             return response.data;
         } catch (error) {

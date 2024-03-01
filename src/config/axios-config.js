@@ -3,7 +3,7 @@
 import axios from 'axios';
 
 const instance = axios.create({
-    baseURL: 'https://order-mgmt-services.onrender.com', // Update with your server URL
+    baseURL: 'https://order-mgmt-services.onrender.com/api', // Update with your server URL
 });
 
 // Add a request interceptor to include the token in headers

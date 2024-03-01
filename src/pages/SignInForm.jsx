@@ -14,9 +14,10 @@ const SignInForm = () => {
     const [authenticated, setAuthenticated] = useState(!!localStorage.getItem('token'));
 
     const navigate = useNavigate();
-    const handleSignin = async () => {
+    const handleSignin = async (e) => {
+        e.preventDefault();
         try {
-            const response = await axios.post('/api/auth/signin', { username, password });
+            const response = await axios.post('/auth/signin', { username, password });
             console.log('Signin successful:', response.data);
             // Optionally, redirect to dashboard or handle success
             localStorage.setItem('token', response.data.token)
