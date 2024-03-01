@@ -11,7 +11,7 @@ const Home = () => {
                     <Carousel.Item>
                         <img
                             className="d-block w-100"
-                            src="https://placekitten.com/600/90" // Replace with your image URL
+                            src="https://placekitten.com/600/90"
                             alt="First slide"
                         />
                         <Carousel.Caption>
@@ -22,7 +22,7 @@ const Home = () => {
                     <Carousel.Item>
                         <img
                             className="d-block w-100"
-                            src="https://placekitten.com/600/91" // Replace with your image URL
+                            src="https://placekitten.com/600/91"
                             alt="Second slide"
                         />
                         <Carousel.Caption>
@@ -30,13 +30,13 @@ const Home = () => {
                             <p>Check out our latest promotions.</p>
                         </Carousel.Caption>
                     </Carousel.Item>
-                    {/* Add more Carousel.Items as needed */}
+
                 </Carousel>
 
                 <div className="container">
-                    {/* Your other homepage content goes here */}
+
                     <h2>Featured Products</h2>
-                    {/* Add more sections or components */}
+
                 </div>
             </div>
         </div>

@@ -1,4 +1,4 @@
-// PlacedOrders.jsx
+
 import React, { useEffect, useState } from 'react';
 import { useOrder } from '../OrderContext';
 import { Link } from 'react-router-dom';
@@ -9,20 +9,19 @@ const PlacedOrders = () => {
     const [submitSuccess, setSubmitSuccess] = useState(false);
 
     const handleRemoveOrder = (orderId) => {
-        // Implement logic to remove the order
+
         removeOrder(orderId);
     };
 
     const handleSubmitOrders = async () => {
         try {
             setSubmitting(true);
-            // Submit the selected orders to the backend
+
             const submittedOrders = await submitOrders(selectedOrders);
             console.log('Submitted orders:', submittedOrders);
             setSubmitting(false);
             setSubmitSuccess(true);
 
-            // Optionally, clear the selected orders or perform other actions
         } catch (error) {
             console.error('Error submitting orders', error);
             setSubmitting(false);
@@ -36,11 +35,11 @@ const PlacedOrders = () => {
 
     useEffect(() => {
         if (submitSuccess) {
-            // Optionally, you can display a success message or perform other actions
+
             alert('Your orders are placed successfully');
-            // Reset the success state to allow submitting again if needed
+
             setSubmitSuccess(false);
-            // Refresh the page after showing the success message
+
             window.location.reload();
         }
     }, [submitSuccess]);
@@ -57,7 +56,7 @@ const PlacedOrders = () => {
                                 <h5 className="card-title">Product: {selectedOrder.product}</h5>
                                 <p className="card-text">Quantity: {selectedOrder.quantity}</p>
                                 <p className="card-text">Price: ${selectedOrder.price}</p>
-                                {/* Add more details as needed */}
+
 
                                 <div className="d-flex justify-content-between mt-3">
                                     <Link to={`/order-details/${selectedOrder.orderId}`} className="btn btn-info">

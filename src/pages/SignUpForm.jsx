@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from '../config/axios-config';
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import './SignUpForm.css'; // Create a CSS file for additional styling if needed
+// import './SignUpForm.css'; 
 
 const SignUpForm = () => {
 
@@ -12,11 +12,11 @@ const SignUpForm = () => {
         try {
             const response = await axios.post('/api/auth/signup', { username, password });
             console.log('Signup successful:', response.data);
-            // Optionally, redirect to login page or handle success
+
             localStorage.setItem('token', response.data.token)
         } catch (error) {
             console.error('Error during signup:', error.response.data.message);
-            // Handle signup error
+
         }
     };
     return (

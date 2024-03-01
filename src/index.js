@@ -8,7 +8,7 @@ import { OrderProvider } from './OrderContext';
 
 const rootElement = document.getElementById('root');
 
-// Use createRoot from "react-dom/client"
+
 ReactDOM.render(
 
   <OrderProvider>

@@ -1,15 +1,15 @@
-// OrderList.jsx (Page Component)
+
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import ProductCard from '../components/ProductCard';
-import { getOrders } from '../services/orderService'; // You'll need to create this service.
+import { getOrders } from '../services/orderService';
 import { fetchOrders } from '../services/orderService';
 
 const OrderList = () => {
     const [orders, setOrders] = useState([]);
 
     useEffect(() => {
-        // Fetch orders from the backend when the component mounts
+
         const fetchData = async () => {
             try {
                 const ordersData = await fetchOrders();

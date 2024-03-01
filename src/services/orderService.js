@@ -1,4 +1,4 @@
-// services/orderService.js
+
 import axios from '../config/axios-config';
 const orders = [];
 
@@ -10,7 +10,7 @@ export const fetchOrders = async () => {
 
     } catch (error) {
         console.error('Error fetching orders', error);
-        throw error; // Re-throw the error to handle it elsewhere if needed
+        throw error;
     }
 };
 export const fetchMyOrders = async () => {
@@ -20,7 +20,7 @@ export const fetchMyOrders = async () => {
 
     } catch (error) {
         console.error('Error fetching orders', error);
-        throw error; // Re-throw the error to handle it elsewhere if needed
+        throw error;
     }
 };
 export const submitOrders = async (orders) => {
@@ -34,13 +34,12 @@ export const submitOrders = async (orders) => {
 };
 
 export const addOrder = (order) => {
-    // You might want to send a request to add an order to the server instead of modifying the local array directly
-    // For demonstration purposes, you can modify the local array, but this won't persist data between sessions
+
     orders.push(order);
 };
 
 export const getOrders = () => {
-    return Promise.resolve(orders); // If you want to keep the local state for some reason
+    return Promise.resolve(orders);
 };
 
 export const getOrderDetails = (orderId) => {

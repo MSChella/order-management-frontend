@@ -1,4 +1,4 @@
-/* SignUpForm.css */
+
 .card {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 400px;
@@ -18,13 +18,12 @@
     margin-left: 5px;
   }
   
-  
-  /* Add margin to the form elements for spacing */
+
   .mb-3 {
     margin-bottom: 15px;
   }
   
-  /* Center the form within the card */
+
   .card-body {
     display: flex;
     flex-direction: column;
@@ -36,7 +35,7 @@
     margin-bottom: 10px;
   }
   
-  /* Center the button within its container */
+
   .btn {
     display: block;
     margin: auto;

@@ -59,7 +59,7 @@ const Header = () => {
                         </ul>
                     </div>
                 </div>
-                {/* Add additional elements on the right, e.g., user profile, etc. */}
+
                 <div className="d-flex px-1">
                     <Link className="nav-link" to="/signin">
                         Sign In

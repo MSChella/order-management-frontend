@@ -1,10 +1,10 @@
-// Dashboard.js
+
 import React from 'react';
-import OrderChart from '../components/OrderChart'; // Update the path accordingly
-// ... (other imports and code)
+import OrderChart from '../components/OrderChart';
+
 
 const Dashboard = () => {
-    // Sample data, replace it with actual data
+
     const orderData = {
         labels: ['January', 'February', 'March', 'April', 'May'],
         datasets: [{
@@ -19,9 +19,9 @@ const Dashboard = () => {
     return (
         <div>
             <h2>Dashboard</h2>
-            {/* Other dashboard content goes here */}
+
             <OrderChart orderData={orderData} />
-            {/* Other dashboard content goes here */}
+
         </div>
     );
 };

@@ -1,4 +1,4 @@
-// OrderContext.js
+
 import React, { createContext, useContext, useState } from 'react';
 import { addOrder, getOrders, getOrderDetails, submitOrders, fetchMyOrders } from './services/orderService';
 import axios from './config/axios-config'
@@ -11,8 +11,8 @@ export const OrderProvider = ({ children }) => {
 
     const placeOrder = (order) => {
         addOrder(order);
-        setSelectedOrders((prevOrders) => [...prevOrders, order]); // Add the order to selectedOrders
-        setSelectedOrder(order); // Set selectedOrder to the latest order
+        setSelectedOrders((prevOrders) => [...prevOrders, order]);
+        setSelectedOrder(order);
     };
 
     const removeOrder = (orderId) => {
@@ -28,7 +28,7 @@ export const OrderProvider = ({ children }) => {
     };
 
     const submitOrders = async (orders) => {
-        // Implement logic to submit the selected orders
+
         console.log('Submitting orders:', orders);
         try {
             const response = await axios.post('/place-orders/submit-orders', orders);
@@ -36,7 +36,7 @@ export const OrderProvider = ({ children }) => {
             return response.data;
         } catch (error) {
             console.error('Error submitting orders:', error);
-            throw error; // Re-throw the error to handle it elsewhere if needed
+            throw error;
         }
     };
 

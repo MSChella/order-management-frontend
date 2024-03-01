@@ -61,7 +61,7 @@ const AppRoutes = ({ authenticated }) => {
             element={<Navigate to="/signin" />} />
         </>
       ) : (
-        // Redirect to sign-in if not authenticated
+
         <Route path="/signin" element={<Navigate to="/signin" />} />
       )}
     </Routes>
@@ -73,7 +73,7 @@ const App = () => {
   const [authenticated, setAuthenticated] = useState(false);
 
   useEffect(() => {
-    // Check if the user is authenticated
+
     const token = localStorage.getItem('token');
 
     if (token) {

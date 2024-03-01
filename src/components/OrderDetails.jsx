@@ -1,4 +1,4 @@
-// OrderDetails.jsx (Page Component)
+
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useOrder } from '../OrderContext';
@@ -55,7 +55,7 @@ const OrderDetails = () => {
                 <p>Product: {order.product}</p>
                 <p>Quantity: {order.quantity}</p>
                 <p>Price: ${order.price}</p>
-                {/* Add more details as needed */}
+
             </div>
         </>
 

@@ -7,7 +7,7 @@ const MyOrdersPages = () => {
     const { fetchMyOrders } = useOrder();
 
     useEffect(() => {
-        // Fetch orders from the backend when the component mounts
+
         const fetchData = async () => {
             try {
                 const myOrdersData = await fetchMyOrders();
@@ -36,7 +36,7 @@ const MyOrdersPages = () => {
                                 <h5 className="card-title">Product: {selectedOrder.product}</h5>
                                 <p className="card-text">Quantity: {selectedOrder.quantity}</p>
                                 <p className="card-text">Price: ${selectedOrder.price}</p>
-                                {/* Add more details as needed */}
+
 
                                 <div className="d-flex justify-content-between mt-3">
                                     <Link to={`/order-details/${selectedOrder.orderId}`} className="btn btn-info">
