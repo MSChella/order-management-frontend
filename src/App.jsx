@@ -52,6 +52,7 @@ const AppRoutes = ({ authenticated }) => {
       <Route path="/signup" element={<SignUpForm />} />
       {authenticated ? (
         <>
+
           <Route path="/order-list" element={<OrderList fetchOrders={fetchOrders} />} />
           <Route path="/my-orders" element={<MyOrdersPages fetchOrderDetails={fetchOrderDetails} />} />
           <Route path="/dashboard" element={<Dashboard />} />
