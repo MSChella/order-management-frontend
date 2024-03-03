@@ -10,7 +10,7 @@ import OrderList from './pages/OrderList';
 import Dashboard from './pages/DashBoard';
 import PlacedOrders from './components/PlaceOrders';
 import Header from './components/Header/Header';
-import Footer from './components/Footer';
+import Footer from './components/Footer/Footer';
 import './App.css';
 
 

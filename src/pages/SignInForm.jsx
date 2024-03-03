@@ -5,6 +5,7 @@ import axios from '../config/axios-config';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../pages/SignInForm.css';
+import instance from '../config/axios-config';
 
 
 
@@ -17,7 +18,7 @@ const SignInForm = () => {
     const handleSignin = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('/auth/signin', { username, password });
+            const response = await instance.post('/auth/signin', { username, password });
             console.log('Signin successful:', response.data);
 
             localStorage.setItem('token', response.data.token)
@@ -28,13 +29,7 @@ const SignInForm = () => {
 
         }
     };
-    const handleSignout = () => {
 
-        localStorage.removeItem('token');
-        setAuthenticated(false);
-        navigate('/');
-
-    };
 
     const handleSignup = () => {
 
@@ -61,14 +56,7 @@ const SignInForm = () => {
                                     <label className="form-check-label" htmlFor="rememberMe">Remember me</label>
                                 </div>
                                 <button type="submit" onClick={handleSignin} className="btn btn-primary w-100">Sign In</button>
-                                {authenticated && (
-                                    <>
 
-                                        <button type="button" onClick={handleSignout} className="btn btn-danger w-100 mt-3">Sign Out</button>
-
-                                        <Link to="/my-orders" className="btn btn-info w-100 mt-3">My Orders</Link>
-                                    </>
-                                )}
 
 
                                 <div className="mt-3">

@@ -1,0 +1,24 @@
+
+.footer {
+    background-color: #f8f9fa; /* Set your desired background color */
+    padding: 20px; /* Adjust padding as needed */
+    text-align: center; /* Center-align text */
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.1); /* Add shadow at the bottom */
+    width: 100%;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+
+  .footer a {
+    color: #007bff; 
+    text-decoration: none; 
+    margin: 0 10px; 
+  }
+  
+  .footer a:hover {
+    text-decoration: underline; 
+  }
+  
