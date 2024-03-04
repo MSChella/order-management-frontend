@@ -5,7 +5,7 @@ import axios from '../config/axios-config';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../pages/SignInForm.css';
-import instance from '../config/axios-config';
+import axiosInstance from '../config/axios-config';
 
 
 
@@ -18,7 +18,7 @@ const SignInForm = () => {
     const handleSignin = async (e) => {
         e.preventDefault();
         try {
-            const response = await instance.post('/auth/signin', { username, password });
+            const response = await axiosInstance.post('/auth/signin', { username, password });
             console.log('Signin successful:', response.data);
 
             localStorage.setItem('token', response.data.token)

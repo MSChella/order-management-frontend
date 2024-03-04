@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, useNavigate, Link } from 'react-router-dom';
 import { OrderProvider, useOrder } from './OrderContext';
-import axios from './config/axios-config';
+
 import SignInForm from './pages/SignInForm';
 import SignUpForm from './pages/SignUpForm';
 import Home from './pages/Home';

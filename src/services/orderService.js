@@ -1,11 +1,13 @@
+import axiosInstance from '../config/axios-config'
 
 import axios from '../config/axios-config';
+
 const orders = [];
 
 
 export const fetchOrders = async () => {
     try {
-        const response = await axios.get('/orders');
+        const response = await axiosInstance.get('/orders');
         return response.data;
 
     } catch (error) {

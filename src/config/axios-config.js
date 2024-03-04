@@ -2,20 +2,23 @@
 import { getToken } from '../utils/authUtils';
 import axios from 'axios';
 
-const instance = axios.create({
+
+const axiosInstance = axios.create({
     baseURL: 'https://order-mgmt-services.onrender.com/api',
 });
 
 
 
-instance.interceptors.request.use((config) => {
+axiosInstance.interceptors.request.use((config) => {
     const token = getToken();
+
 
     if (token) {
         console.log(token);
         config.headers.Authorization = `Bearer ${token}`;
+        console.log(token);
     }
     return config;
 });
 
-export default instance;
+export default axiosInstance;
