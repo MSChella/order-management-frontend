@@ -97,60 +97,9 @@ const App = () => {
   );
 };
 
-const ErrorPage = () => {
-  return (
-    <div>
-      <h2>Error Page</h2>
-      <p>Sorry, something went wrong!</p>
-    </div>
-  );
-};
+
 
 export default App;
 
 
 
-
-// return (
-//   <>
-
-//     <Header />
-
-//     <nav>
-//       <ul>
-//         <li>
-//           <Link to="/">Home</Link>
-//         </li>
-//         <li>
-//           <Link to="/order-list">Orders</Link>
-//         </li>
-//       </ul>
-//     </nav>
-
-//     <OrderProvider>
-//       <Routes>
-//         <Route path="/" element={<Home />} />
-//         <Route path='/signin' element={<SignInForm />} />
-//         <Route path='/signup' element={<SignUpForm />} />
-//         <Route path="/dashboard" element={<Dashboard />} />
-//         <Route path="/order-list" element={<OrderList />} />
-//         <Route path="/my-orders" element={<MyOrdersPages fetchOrderDetails={fetchOrderDetails} />} />
-//         <Route path="/order-details/:orderId" element={<OrderDetails placeOrder={placeOrder} />} />
-//         <Route path="/placed-orders" element={<PlacedOrders fetchOrderDetails={fetchOrderDetails} />} />
-//         <Route path="/error" element={<ErrorPage />} />
-//       </Routes>
-//     </OrderProvider>
-
-//     <Footer />
-//   </>
-// );
-// }
-// const ErrorPage = () => {
-//   return (
-//     <div>
-//       <h2>Error Page</h2>
-//       <p>Sorry, something went wrong!</p>
-//     </div>
-//   );
-// };
-// export default App;
