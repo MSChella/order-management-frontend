@@ -47,22 +47,18 @@ const Header = () => {
                                         Home
                                     </Link>
                                 </li>
-                                <li className="nav-item">
+                                <li className="nav-item dropdown">
                                     <Link className="nav-link" to="/order-list">
                                         Orders
                                     </Link>
-                                    <ul>
-                                        <li className="nav-item">
-                                            <Link className="nav-link" to="/placed-orders">
-                                                Orders Placed
-                                            </Link>
-                                        </li>
-                                        <li className="nav-item">
-                                            <Link className="nav-link" to="/my-orders">
-                                                My Orders
-                                            </Link>
-                                        </li>
-                                    </ul>
+                                    <div className="dropdown-content">
+                                        <Link className="nav-link" to="/placed-orders">
+                                            Orders Placed
+                                        </Link>
+                                        <Link className="nav-link" to="/my-orders">
+                                            My Orders
+                                        </Link>
+                                    </div>
                                 </li>
 
                                 <li className="nav-item">
