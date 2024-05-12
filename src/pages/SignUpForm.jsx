@@ -8,7 +8,7 @@ const SignUpForm = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
-    const handleSignup = async () => {
+    const handleSignup = async (e) => {
         e.preventDefault();
         try {
             const response = await axiosInstance.post('/auth/signup', { username, password });
