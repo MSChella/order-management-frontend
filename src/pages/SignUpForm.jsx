@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import axios from '../config/axios-config';
+import axiosInstance from '../config/axios-config'
 import 'bootstrap/dist/css/bootstrap.min.css';
 // import './SignUpForm.css'; 
 
@@ -9,8 +9,9 @@ const SignUpForm = () => {
     const [password, setPassword] = useState('');
 
     const handleSignup = async () => {
+        e.preventDefault();
         try {
-            const response = await axios.post('/auth/signup', { username, password });
+            const response = await axiosInstance.post('/auth/signup', { username, password });
             console.log('Signup successful:', response.data);
 
             localStorage.setItem('token', response.data.token)
