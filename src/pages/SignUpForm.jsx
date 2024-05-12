@@ -32,10 +32,6 @@ const SignUpForm = () => {
                                     <input type="text" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} />
                                 </div>
                                 <div className="mb-3">
-                                    <label htmlFor="email" className="form-label">Email</label>
-                                    <input type="email" className="form-control" id="email" name="email" required />
-                                </div>
-                                <div className="mb-3">
                                     <label htmlFor="password" className="form-label">Password</label>
                                     <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
                                 </div>
