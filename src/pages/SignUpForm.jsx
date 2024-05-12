@@ -35,10 +35,10 @@ const SignUpForm = () => {
                                     <label htmlFor="password" className="form-label">Password</label>
                                     <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
                                 </div>
-                                <div className="mb-3">
+                                {/* <div className="mb-3">
                                     <label htmlFor="confirmPassword" className="form-label">Confirm Password</label>
                                     <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
-                                </div>
+                                </div> */}
                                 <button type="submit" onClick={handleSignup} className="btn btn-primary w-100">Sign Up</button>
                             </form>
                         </div>
