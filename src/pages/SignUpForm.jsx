@@ -10,7 +10,7 @@ const SignUpForm = () => {
 
     const handleSignup = async () => {
         try {
-            const response = await axios.post('/api/auth/signup', { username, password });
+            const response = await axios.post('/auth/signup', { username, password });
             console.log('Signup successful:', response.data);
 
             localStorage.setItem('token', response.data.token)
