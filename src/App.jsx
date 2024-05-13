@@ -48,21 +48,18 @@ const AppRoutes = ({ authenticated }) => {
 
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/signin" element={<SignInForm />} />
+      <Route path="/signin" element={authenticated ? <Navigate to="/" /> : <SignInForm />} />
       <Route path="/signup" element={<SignUpForm />} />
-      {authenticated ? (
+      {authenticated && (
         <>
 
           <Route path="/order-list" element={<OrderList fetchOrders={fetchOrders} />} />
           <Route path="/my-orders" element={<MyOrdersPages fetchOrderDetails={fetchOrderDetails} />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/placed-orders" element={<PlacedOrders fetchOrderDetails={fetchOrderDetails} />} />
-          <Route path="/signin"
-            element={<Navigate to="/signin" />} />
-        </>
-      ) : (
 
-        <Route path="/signin" element={<Navigate to="/signin" />} />
+        </>
+
       )}
     </Routes>
 
@@ -79,8 +76,14 @@ const App = () => {
     if (token) {
       setAuthenticated(true);
 
+    } else {
+      setAuthenticated(false);
     }
   }, []);
+
+
+
+
 
   return (
 

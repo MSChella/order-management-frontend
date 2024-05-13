@@ -16,6 +16,7 @@ const Header = () => {
         localStorage.removeItem('token');
         setAuthenticated(false);
         navigate('/');
+        alert("your logged out");
 
     };
     return (

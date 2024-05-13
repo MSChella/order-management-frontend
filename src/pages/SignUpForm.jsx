@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axiosInstance from '../config/axios-config'
+import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 // import './SignUpForm.css'; 
 
@@ -8,6 +9,9 @@ const SignUpForm = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
+
+    const navigate = useNavigate();
+
     const handleSignup = async (e) => {
         e.preventDefault();
         try {
@@ -15,6 +19,7 @@ const SignUpForm = () => {
             console.log('Signup successful:', response.data);
 
             localStorage.setItem('token', response.data.token)
+            navigate('/');
         } catch (error) {
             console.error('Error during signup:', error.response.data.message);
 

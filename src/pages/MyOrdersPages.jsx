@@ -29,7 +29,7 @@ const MyOrdersPages = () => {
             <h2 className="text-center mb-4">Orders Placed</h2>
             <div className="row">
                 {myOrders.map((selectedOrder) => (
-                    <div key={selectedOrder.id} className="col-md-6 offset-md-3 mb-4">
+                    <div key={selectedOrder.orderId} className="col-md-6 offset-md-3 mb-4">
                         <div className="card">
                             <div className="card-body">
                                 <p className="card-text">Order ID: {selectedOrder.orderNumber}</p>
